@@ -1,0 +1,2 @@
+rootProject.name='AlfawareProgrammingMetricsV2'
+include ':app'

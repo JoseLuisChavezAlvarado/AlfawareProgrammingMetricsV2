@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "51224995160",
+    "firebase_url": "https://alfawareprogrammingmetricsv2.firebaseio.com",
+    "project_id": "alfawareprogrammingmetricsv2",
+    "storage_bucket": "alfawareprogrammingmetricsv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51224995160:android:9d0460f12713201a0f712d",
+        "android_client_info": {
+          "package_name": "alfaware.joseluisch.alfawareprogrammingmetricsv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51224995160-ab6pmaeb64rduqpp4d0dssdngp6lulri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbMOWmzBLU0ZuiRrUpOJkDOVwmP68hcsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51224995160-ab6pmaeb64rduqpp4d0dssdngp6lulri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
