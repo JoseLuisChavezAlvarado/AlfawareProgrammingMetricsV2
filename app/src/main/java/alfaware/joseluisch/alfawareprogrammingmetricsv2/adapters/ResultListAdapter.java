@@ -17,9 +17,9 @@ import alfaware.joseluisch.alfawareprogrammingmetricsv2.R;
 import alfaware.joseluisch.alfawareprogrammingmetricsv2.databinding.MainActivityAdapterBinding;
 import alfaware.joseluisch.alfawareprogrammingmetricsv2.entities.Result;
 
-public class MainActivityAdapter extends ArrayAdapter<Result> {
+public class ResultListAdapter extends ArrayAdapter<Result> {
 
-    public MainActivityAdapter(Context context, List<Result> users) {
+    public ResultListAdapter(Context context, List<Result> users) {
         super(context, 0, users);
     }
 

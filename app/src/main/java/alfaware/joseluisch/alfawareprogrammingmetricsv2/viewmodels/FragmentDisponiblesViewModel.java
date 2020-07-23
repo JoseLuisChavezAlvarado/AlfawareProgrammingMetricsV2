@@ -10,7 +10,7 @@ import alfaware.joseluisch.alfawareprogrammingmetricsv2.abstract_clases.ListResu
 import alfaware.joseluisch.alfawareprogrammingmetricsv2.entities.Result;
 import alfaware.joseluisch.alfawareprogrammingmetricsv2.repositories.ResultRepository;
 
-public class MainActivityViewModel extends ViewModel {
+public class FragmentDisponiblesViewModel extends ViewModel {
 
     private MutableLiveData<ListResult<Result>> results = new MutableLiveData<>();
     private MutableLiveData<DataResult<Result, Exception>> result = new MutableLiveData<>();

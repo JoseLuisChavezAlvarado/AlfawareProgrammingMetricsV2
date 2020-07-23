@@ -1,9 +1,13 @@
 package alfaware.joseluisch.alfawareprogrammingmetricsv2.repositories;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
@@ -50,6 +54,29 @@ public class ResultRepository {
             @Override
             public void onFailure(Call<Character> call, Throwable t) {
                 liveData.getValue().getResult().setException(new Exception(t.getMessage()));
+                liveData.postValue(liveData.getValue());
+            }
+        });
+    }
+
+    public void getFirebase(final MutableLiveData<ListResult<Result>> liveData, Result result) {
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference(FirebaseReference.RESULT);
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                liveData.getValue().getResult().getData().clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Result result = snapshot.getValue(Result.class);
+                    liveData.getValue().getResult().getData().add(result);
+                }
+                liveData.postValue(liveData.getValue());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                liveData.getValue().getResult().getData().clear();
+                liveData.getValue().getResult().setException(databaseError.toException());
                 liveData.postValue(liveData.getValue());
             }
         });
